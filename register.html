@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penole - Register</title>
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="website icon" type="png" href="assets/logo-mini.png">
+</head>
+<body>
+    <img src="assets/logo.png" alt="png">
+    <button class="go" onclick="window.location.href='penole-intro.html'">go back</button>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Create Account</h1>
+            </div>
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <span class="password-hint">Minimum 6 characters required</span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <span class="password-mismatch">Passwords do not match</span>
+                </div>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+            <div class="form-footer">
+                <p>Already have an account? <a href="login.html" class="login-link">Login</a></p>
+            </div>
+            <div class="success-message" id="successMessage">
+                <div class="success-content">
+                    <h2>Registration Successful!</h2>
+                    <p>Welcome to Penole</p>
+                    <button onclick="window.location.href='penole.html'" class="success-btn">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/re.js"></script>
+</body>
+</html>
